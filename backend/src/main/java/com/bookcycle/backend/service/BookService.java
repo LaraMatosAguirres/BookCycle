@@ -41,6 +41,10 @@ public class BookService {
         return new BookDTO(book);
     }
 
+    public void deleteBook(Long id){
+        bookRepository.deleteById(id);
+    }
+
     public void saveToEntity(BookDTO bookDTO, Book book){
         book.setName(bookDTO.getName());
         book.setAuthor(bookDTO.getAuthor());
